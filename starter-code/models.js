@@ -12,7 +12,7 @@ var foodSchema = new Schema({
     default: ""
   },
   ingredients: [{
-    type: Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId, // referencing
     ref: 'Ingredient'
   }]
 });
@@ -31,6 +31,36 @@ var ingredientSchema = new Schema({
 
 var Food = mongoose.model("Food", foodSchema);
 var Ingredient = mongoose.model("Ingredient", ingredientSchema);
+
+// let cheddar = new Schema()
+// // make a new Ingredient document
+//
+// var cheddar = new db.Ingredient ({
+//     title: 'cheddar cheese',
+//     origin: 'Wisconsin'
+// });
+//
+// cheddar.save(function(err,savedCheese) {
+//     if(err) {
+//         return console.log(err);
+//     } else {
+//         console.log('cheesy quiche saved successfully');
+//     }
+// });
+// // make a new Food document
+// var cheesyQuiche = new db.Food ({
+//     name: 'Quiche',
+//     ingredients: []
+// });
+//
+// cheesyQuiche.ingredients.push(cheddar);
+// cheesyQuiche.save(function(err,savedCheesyQuiche) {
+//     if(err) {
+//         return console.log(err);
+//     } else {
+//         console.log('cheesyQuiche food is ', savedCheesyQuiche);
+//     }
+// });
 
 // Embedded Data
 var tweetSchema = new Schema({
