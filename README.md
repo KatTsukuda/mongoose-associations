@@ -223,6 +223,7 @@ cheesy quiche saved successfully
 What are we looking at?
 
 <details><summary>click for line-by-line explanation</summary>
+
 1. Line 1: `__v` represents the number of times the document has been accessed.
 
 1. Line 2: The `name` property of the `Food` document we have created.
@@ -272,7 +273,7 @@ db.Food.findOne({ name: 'Quiche' })
 </details>
 
 <details>
-  <summary>Click to see the output from the above `findOne()` method call with `populate`.</summary>
+  <summary>Click to see the output from the above <code>findOne()</code> method call with <code>populate</code>.</summary>
 
   ```
   {
